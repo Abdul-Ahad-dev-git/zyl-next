@@ -1,8 +1,9 @@
 import { wrapHandler } from "zyl-next/wrapHandler";
 import { AuthGuard } from "../../lib/guard";
 import { __CNAME__Module } from "./__NAME__.module";
-import { __NAME__BodyDTO, __NAME__ParamsDTO, __NAME__QueryDTO } from "./Dto/__NAME__.dto";
-
+import { __NAME__BodySchema,  } from "./Dto/Body/__NAME__.dto";
+import {  __NAME__ParamsSchema,  } from "./Dto/Param/__NAME__.dto";
+import { __NAME__QuerySchema } from "./Dto/Query/__NAME__.dto";
 const { controller } = new __CNAME__Module();
  // GET /api/__NAME__
 export const GET = wrapHandler(controller.getAll.bind(controller), {
@@ -15,27 +16,29 @@ export const GET_ONE = wrapHandler(controller.getOne.bind(controller), {
   route: "/api/__NAME__/getone",
   method: "GET",
   guard: AuthGuard,
-  queryDTO:__NAME__QueryDTO,
+  querySchema:__NAME__QuerySchema,
 });
 // POST /api/__NAME__
 export const POST = wrapHandler(controller.create.bind(controller), {
   route: "/api/__NAME__",
   method: "POST",
   guard: AuthGuard,
-  bodyDTO: __NAME__BodyDTO,
+  bodySchema: __NAME__BodySchema,
 });
 // PATCH /api/__NAME__/[id]
 export const PATCH = wrapHandler(controller.update.bind(controller), {
   route: "/api/__NAME__/[id]",
   method: "PATCH",
   guard: AuthGuard,
-  bodyDTO: __NAME__BodyDTO,
-  paramsDTO: __NAME__ParamsDTO, 
+  bodySchema: __NAME__BodySchema,
+  paramsSchema: __NAME__ParamsSchema, 
 });
   // DELETE /api/__NAME__/[id]
 export const DELETE = wrapHandler(controller.delete.bind(controller), {
   route: "/api/__NAME__/[id]",
   method: "DELETE",
   guard: AuthGuard,
-  paramsDTO: __NAME__ParamsDTO, 
+  paramsSchema: __NAME__ParamsSchema, 
 });
+
+

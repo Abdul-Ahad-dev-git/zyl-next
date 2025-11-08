@@ -1,2 +1,2 @@
-export * from "./wrapHandler";
+export {};
 //# sourceMappingURL=index.d.ts.map

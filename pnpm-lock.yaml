@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       chalk:
-        specifier: ^5.3.0
+        specifier: '5'
         version: 5.6.2
       chokidar:
         specifier: ^4.0.3
@@ -17,11 +17,20 @@ importers:
       concurrently:
         specifier: ^8.2.0
         version: 8.2.2
+      debounce:
+        specifier: ^3.0.0
+        version: 3.0.0
       fs-extra:
         specifier: ^11.2.0
         version: 11.3.2
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
       next:
-        specifier: '>=15.0.0'
+        specifier: '>=13'
         version: 15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: '>=18'
@@ -30,8 +39,11 @@ importers:
         specifier: '>=18'
         version: 19.2.0(react@19.2.0)
       yup:
-        specifier: ^1.7.1
+        specifier: '>=1'
         version: 1.7.1
+      zyl-next:
+        specifier: ^10.1.9
+        version: 10.1.9(next@15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yup@1.7.1)
     devDependencies:
       '@types/chalk':
         specifier: ^2.2.4
@@ -39,6 +51,9 @@ importers:
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
+      '@types/lodash':
+        specifier: ^4.17.20
+        version: 4.17.20
       '@types/next':
         specifier: ^9.0.0
         version: 9.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -248,6 +263,9 @@ packages:
   '@types/jsonfile@6.1.4':
     resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
+  '@types/lodash@4.17.20':
+    resolution: {integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==}
+
   '@types/next@9.0.0':
     resolution: {integrity: sha512-gnBXM8rP1mnCgT1uE2z8SnpFTKRWReJlhbZLZkOLq/CH1ifvTNwjIVtXvsywTy1dwVklf+y/MB0Eh6FOa94yrg==}
     deprecated: This is a stub types definition. next provides its own type definitions, so you do not need this installed.
@@ -301,6 +319,10 @@ packages:
     resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
 
+  debounce@3.0.0:
+    resolution: {integrity: sha512-64byRbF0/AirwbuHqB3/ZpMG9/nckDa6ZA0yd6UnaQNwbbemCOwvz2sL5sjXLHhZHADyiwLm0M5qMhltUUx+TA==}
+    engines: {node: '>=20'}
+
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
@@ -333,6 +355,9 @@ packages:
 
   jsonfile@6.2.0:
     resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
+
+  lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -493,6 +518,15 @@ packages:
   yup@1.7.1:
     resolution: {integrity: sha512-GKHFX2nXul2/4Dtfxhozv701jLQHdf6J34YDh2cEkpqoo8le5Mg6/LrdseVLrFarmFygZTlfIhHx/QKfb/QWXw==}
 
+  zyl-next@10.1.9:
+    resolution: {integrity: sha512-mrPHVtkV9e4keq7YNlySjjBXGKV1brG1da3EKtajULEcEpC2NSYaFkoBRkC+Qz+dIj/4QiyRZDjNxWtMM+WyHQ==}
+    hasBin: true
+    peerDependencies:
+      next: '>=13'
+      react: '>=18'
+      react-dom: '>=18'
+      yup: '>=1'
+
 snapshots:
 
   '@babel/runtime@7.28.4': {}
@@ -634,6 +668,8 @@ snapshots:
     dependencies:
       '@types/node': 24.7.2
 
+  '@types/lodash@4.17.20': {}
+
   '@types/next@9.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       next: 15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -700,6 +736,8 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.4
 
+  debounce@3.0.0: {}
+
   detect-libc@2.1.2:
     optional: true
 
@@ -726,6 +764,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  lodash-es@4.17.21: {}
 
   lodash@4.17.21: {}
 
@@ -885,3 +925,17 @@ snapshots:
       tiny-case: 1.0.3
       toposort: 2.0.2
       type-fest: 2.19.0
+
+  zyl-next@10.1.9(next@15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yup@1.7.1):
+    dependencies:
+      chalk: 5.6.2
+      chokidar: 4.0.3
+      concurrently: 8.2.2
+      debounce: 3.0.0
+      fs-extra: 11.3.2
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      next: 15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      yup: 1.7.1
