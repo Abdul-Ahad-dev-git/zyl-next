@@ -1,6 +1,6 @@
 {
   "name": "zyl-next",
-  "version": "10.2.6",
+  "version": "10.2.7",
   "description": "Zyl is a Next.js server structure generator and CLI inspired by NestJS and Angular modular structure.",
   "type": "module",
   "license": "MIT",
